@@ -2,14 +2,15 @@ function startDataUpload() {
 	var name = document.getElementById("name").value;
     var surname = document.getElementById("surname").value;
     var module = document.getElementById("module").value;
-    var postString = "name: "+name+"&surname: "+surname+"&module: "+module;
+    var postString = "name:"+name+"&surname:"+surname+"&module:"+module;
     alert (postString);
+    processData(postString)  //call the function
 }
 
 var client; // the global variable that holds the request
 function processData(postString) {
    client = new XMLHttpRequest();
-   client.open('POST','http://developer.cege.ucl.ac.uk:30250/reflectData',true);
+   client.open('POST','http://developer.cege.ucl.ac.uk:30288/reflectData',true);
    client.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
    client.onreadystatechange = dataUploaded;
    client.send(postString);
@@ -23,3 +24,5 @@ if (client.readyState == 4) {
 document.getElementById("dataUploadResult").innerHTML = client.responseText;
 }
 }
+
+
