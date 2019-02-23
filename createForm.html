@@ -14,13 +14,13 @@
 </div>
 
 <div>
-<p>Would you like lectures in the morning or afternoon?</p>
+<h4>Would you like lectures in the morning or afternoon?</h4>
 Morning: <input type="radio" name="amorpm" id="morning" /><br />
 Afternoon: <input type="radio" name="amorpm" id ="afternoon"/><br />
 </div>
 
 <div>
-<p>Which modules are you taking?</p>
+<h4>Which modules are you taking?</h4>
 CEGEG077: <input type="checkbox" name="modules" id = check1 value="CEGEG077" /><br />
 CEGEG129: <input type="checkbox" name="modules" id = check2 value="CEGEG129" /><br />
 CEGEG082: <input type="checkbox" name="modules" id = check3 value="CEGEG082" /><br />
@@ -28,7 +28,7 @@ CEGEG034: <input type="checkbox" name="modules" id = check4 value="CEGEG034" /><
 </div>
 
 <div>
-<p>What is your first language?</p>
+<h4>What is your first language?</h4>
 <select name="languageselectbox" id="languageselectbox">
 <option >English </option>
 <option>Mandarin</option>
@@ -39,5 +39,13 @@ CEGEG034: <input type="checkbox" name="modules" id = check4 value="CEGEG034" /><
 </select>
 <br />
 </div>
+
+<div>
+<p></p>   <!-- Add a blank line -->
+<button id="startUpload" onclick="startDataUpload()">Start Data Upload</button>
+<div id="dataUploadResult">The result of the upload goes here</div>
+</div>
+
+<script src="uploadData.js"> </script>
 
 </body>
